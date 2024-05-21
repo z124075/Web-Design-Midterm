@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: #000;
+            color: #00ff00;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 0 10px #00ff00;  
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            color: #02ad02;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .content {
+            font-family: 'Orbitron', sans-serif;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -20px;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Enter the Matrix</h1>
+    </div>
+    <div class="content">
+        <p>Welcome ! I'm Nikelle Christiansen, a 4th-year comp sci major. 
+            In my free time I love to watch anime, listen to music, go to concerts, and play video games.</p>
+    </div>
+</body>
+</html>
