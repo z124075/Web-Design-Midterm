@@ -1,0 +1,171 @@
+<!--
+    Nikelle Christiansen
+    Web Design and Programming Midterm
+    TO DO: protfolio protion w photos
+-->
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: #000;
+            color: #00ff00;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        /*design elements for the hero class*/
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 0 10px #00ff00;  
+        }
+
+        /*design elements for the hero h1 headings*/
+        .hero h1 {
+            font-size: 50px;
+            color: #02ad02;
+            animation: glow 1.5s infinite alternate;
+        }
+        /*design elements for the content class*/
+        .content {
+            font-family: 'Orbitron', sans-serif;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -20px;
+        }
+        /*content styling*/
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        /*default image container, text on right*/
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .image-container img {
+            max-width: 60%;
+            border: 5px solid #00ff00;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #00ff00;
+            margin-right: 20px;
+        }
+        /*text next to images*/
+        .image-container p {
+            font-family: 'Orbitron', sans-serif;
+            color: #02ad02;
+            margin: 0;
+            font-size: 14px;
+            max-width: 70%;
+        }
+        /*image container, text on right*/
+        .image-container-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            text-align: right;
+            flex-direction: row-reverse;
+        }
+        .image-container-left img {
+            margin-left: 30px;
+            margin-right: 0;
+        }
+
+        /*specifically for last portfolio image due to original huge size*/
+        .image-container-small img {
+            max-width: 40%;
+        }
+        /* Adds space between the image containers */
+        .image-container + .image-container {
+            margin-top: 175px;
+        }
+
+        /*makes the glow on the opening screen text*/
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Enter the Matrix</h1>
+    </div>
+    <div class="content">
+        <p>Welcome ! I'm Nikelle Christiansen, a 4th-year comp sci major. 
+            In my free time I love to shop, swim, watch anime, listen to music, go to concerts, 
+            and play video games.
+        </p><br><br><br><br><br>
+
+        <h1>My Portfolio</h1>
+        <p>I have a wide variety of computer science knowledge as shown here by my range of different
+                projects, but my current career focus is on Data Science
+        </p><br>
+
+        <!-- first portfolio image -->
+        <div class="image-container">
+            <img src="portfolio1.png" alt="Portfolio Image">
+            <p>Here are some results taken from a project from a Data Science class where I explored the Query Plan 
+                of a unique constraint placed on environmental data, using mySQL.
+            </p>
+        </div>
+
+        <!-- second portfolio image -->
+        <div class="image-container image-container-left">
+            <img src="portfolio2.png" alt="Portfolio Image 2">
+            <p>Here is a portion of a project I completed from an Algorithms class, exploring the Timber Problem.
+                For those unfamiliar, the timber problem is an example of a heuristic, greedy algorithm in that
+                its main focus is solving a problem quickly rather than most-optimally. In this part of the project,
+                I have written a function utilizing a recursive method for solving this problem.
+                This was written using C++. 
+            </p>
+        </div>
+        
+        <!-- third portfolio image -->
+        <div class="image-container image-container-small">
+            <img src="portfolio3.png" alt="Portfolio Image 3">
+            <p>This is from a project I completed for a clinic class working with a real world client. This diagram
+                breaks down the backend work we completed for the company, an educational tutoring service
+                and describes the intended functionality of our back-end program. This is a Python program hosted 
+                using AWS, to be called by our JavaScript frontend. The backend receives information from the frontend, 
+                the theme and problem type, and that information is passed to a function hosted on AWS lambda. 
+                That function is responsible for creating a prompt which is then sent to an OpenAI API for processing. 
+                Once processed, a problem set is generated based on the prompt and returned to the front end.
+            </p>
+        </div>
+
+        <div class="hero">
+            <h1>Thank You For Your Visit</h1>
+        </div>
+
+        <div class="content">
+            <p>Now leaving the matrix...</p>
+        </div>
+
+    </div>
+</body>
+</html>
+
