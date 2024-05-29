@@ -1,7 +1,6 @@
 <!--
     Nikelle Christiansen
     Web Design and Programming Midterm
-    TO DO: protfolio protion w photos
 -->
 
 <!DOCTYPE html>
@@ -21,9 +20,11 @@
             margin: 0;
             padding: 0;
         }
+
         /*design elements for the hero class*/
         .hero {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -38,7 +39,26 @@
             font-size: 50px;
             color: #02ad02;
             animation: glow 1.5s infinite alternate;
+            margin-bottom: 20px;
         }
+
+        /* Styles for navigation links */
+        .nav-links {
+            margin-top: 300px;
+        }
+        .nav-links a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 20px;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
         /*design elements for the content class*/
         .content {
             font-family: 'Orbitron', sans-serif;
@@ -48,11 +68,11 @@
             border-top-right-radius: 50px;
             margin-top: -20px;
         }
-        /*content styling*/
         .content p {
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 2.0;
         }
+ 
         /*default image container, text on right*/
         .image-container {
             display: flex;
@@ -68,6 +88,7 @@
             box-shadow: 0 0 20px #00ff00;
             margin-right: 20px;
         }
+
         /*text next to images*/
         .image-container p {
             font-family: 'Orbitron', sans-serif;
@@ -76,6 +97,7 @@
             font-size: 14px;
             max-width: 70%;
         }
+
         /*image container, text on right*/
         .image-container-left {
             display: flex;
@@ -108,19 +130,25 @@
                 text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
             }
         }
+
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>Enter the Matrix</h1>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </div>
     </div>
-    <div class="content">
-        <p>Welcome ! I'm Nikelle Christiansen, a 4th-year comp sci major. 
+    <div id="about" class="content">
+        <p><br><br><br><br>
+            Welcome ! I'm Nikelle Christiansen, a 4th-year comp sci major. 
             In my free time I love to shop, swim, watch anime, listen to music, go to concerts, 
             and play video games.
-        </p><br><br><br><br><br>
+        </p><br><br><br><br><br><br><br><br><br>
 
-        <h1>My Portfolio</h1>
+        <h1 id="projects">My Portfolio</h1>
         <p>I have a wide variety of computer science knowledge as shown here by my range of different
                 projects, but my current career focus is on Data Science
         </p><br>
